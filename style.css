@@ -107,7 +107,7 @@ section img {
 section img#moon {
   mix-blend-mode: screen;
 }
-section img#mountains_front {
+section img#maindesert {
   z-index: 10;
 }
 #text {
@@ -126,7 +126,7 @@ section img#mountains_front {
   background: white;
   color: #2b1055;
   font-size: 1.3em;
-  z-index: 9;
+  z-index: 1;
   transform: translateY(100px);
   font-weight: 550;
 }
@@ -151,3 +151,30 @@ section img#mountains_front {
   font-size: 1em;
   color: white;
 }
+.fadeInbot{
+  animation: fadeInbot 1.5s;
+}
+@keyframes fadeInbot {
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeIntop{
+  animation: fadeIntop 1s;
+}
+@keyframes fadeIntop {
+  0%{
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
