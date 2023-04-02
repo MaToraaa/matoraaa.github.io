@@ -152,7 +152,7 @@ section img#maindesert {
   color: white;
 }
 .fadeInbot{
-  animation: fadeInbot 1.5s;
+  animation: fadeInbot var(--sec);
 }
 @keyframes fadeInbot {
   0%{
@@ -165,7 +165,7 @@ section img#maindesert {
   }
 }
 .fadeIntop{
-  animation: fadeIntop 1s;
+  animation: fadeIntop var(--sec);
 }
 @keyframes fadeIntop {
   0%{
