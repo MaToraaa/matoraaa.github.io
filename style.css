@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 :root {
   --clr: #222327;
+  --clrbg: #140f32;
 }
 * {
   margin: 0;
