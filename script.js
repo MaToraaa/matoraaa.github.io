@@ -1,3 +1,4 @@
+
 let stars = document.getElementById("stars");
 let moon = document.getElementById("moon");
 let star = document.getElementById("stars");
