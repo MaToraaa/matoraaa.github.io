@@ -107,20 +107,6 @@ section img {
 section#Journey{
   background: #302c4b;
 }
-section h2.secjor{
-  z-index: 10;
-  color: white;
-  transition: 0.3s ease-in-out;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  display: flex;
-  right: 200px;
-  top: 200px;
-}
 section div.grada::before{
   content: "";
   position: absolute;
@@ -179,17 +165,33 @@ section img#oasisld {
   color: #ffffff;
   transition: 0.2s ease-in-out;
 }
-.sec {
+.sec{
   margin-bottom: 150px;
   margin-top: 150px;
   position: relative;
   padding: 100px;
   background: #140f32;
 }
-.sec h2 {
+.jor{
+  margin-bottom: 150px;
+  margin-top: 0;
+  top: 0;
+  position: relative;
+  padding: 100px;
+  padding-top: 50px;
+}
+.jor h2{
+  padding-bottom: 20px;
+}
+.sec h2{
   font-size: 3.5em;
   margin-bottom: 10px;
   color: white;
+}
+.sec h3{
+  font-size: 1.3em;
+  color: white;
+  margin-bottom: 15px;
 }
 .sec p {
   font-size: 1em;
