@@ -15,6 +15,8 @@ body {
   overflow-x: hidden;
   background: #140f32;
 }
+
+/* header */
 header {
   position: absolute;
   left: 0;
@@ -80,19 +82,16 @@ header ul li a.active:hover {
   color: #ffffff;
   transition: 0.2s ease-in-out;
 }
+
+/* navigasi */
 .navigation {
-  left: 35%;
-  bottom: 5%;
   position: fixed;
-  width: 400px;
+  width: 350px;
   height: 70px;
   background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
   border-radius: 10px;
   z-index: 2000;
-  scroll-behavior: smooth;
 }
 .navigation ul {
   display: flex;
@@ -139,6 +138,9 @@ header ul li a.active:hover {
   opacity: 1;
   transform: translateY(10px);
 }
+
+
+/* section */
 section {
   position: relative;
   width: 100%;
@@ -301,3 +303,18 @@ section img#oasisld {
 }
 
 
+@media (max-width: 2000px) {
+  .navigation{
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .navigation{
+    display: inline-block;
+    transform: translateY(500px) translateX(80px);
+    place-content: center;
+  }
+  header ul li {
+display: none;
+  }
+}
