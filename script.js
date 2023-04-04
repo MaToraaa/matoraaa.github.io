@@ -11,6 +11,14 @@ let btn = document.getElementById("btn");
 let mountains_front = document.getElementById("maindesert");
 let header = document.querySelector("header");
 
+
+const list = document.querySelectorAll('.list');
+function activeLink(){
+  list.forEach((item) => item.classList.remove('active'));
+  this.classList.add('active');
+}
+list.forEach((item) => item.addEventListener('click',activeLink));
+
 window.addEventListener("scroll", function () {
   let value = window.scrollY;
   star.style.left = value * 0.25 + "px";

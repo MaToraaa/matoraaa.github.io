@@ -87,10 +87,14 @@ header ul li a.active:hover {
 .navigation {
   position: fixed;
   width: 350px;
+  max-width: 400px;
   height: 70px;
   background: white;
-  display: grid;
+  display: block;
   border-radius: 10px;
+  bottom: 7%;
+  left: 50%;
+  transform: translate(-50%, -7%);
   z-index: 2000;
 }
 .navigation ul {
@@ -122,8 +126,8 @@ header ul li a.active:hover {
   transition: 0.5s;
   color: var(--clr);
 }
-.navigation ul li:hover a .icon {
-  transform: translateY(-35px);
+.navigation ul li.active a .icon {
+  transform: translateY(-32px);
 }
 .navigation ul li a .navv {
   position: absolute;
@@ -134,10 +138,60 @@ header ul li a.active:hover {
   transform: translateY(20px);
   opacity: 0;
 }
-.navigation ul li:hover a .navv {
+.navigation ul li.active a .navv {
   opacity: 1;
   transform: translateY(10px);
 }
+.indicator{
+  position: absolute;
+  transform: translateY(-50%);
+  bottom: 50%;
+  width: 70px;
+  height: 70px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: 6px solid var(--clrbg);
+  transition: 1s;
+}
+.indicator::before{
+  content: '';
+  position: absolute;
+  top: 53%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0 0 transparent;
+}
+.indicator::after{
+  content: '';
+  position: absolute;
+  top: 53%;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 transparent;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator{
+  transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+  transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+  transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+  transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+  transform: translateX(calc(70px * 4));
+}
+
 
 
 /* section */
@@ -310,11 +364,9 @@ section img#oasisld {
 }
 @media (max-width: 800px) {
   .navigation{
-    display: inline-block;
-    transform: translateY(500px) translateX(80px);
-    place-content: center;
+    display: block;
   }
   header ul li {
-display: none;
+    display: none;
   }
 }
