@@ -27,11 +27,11 @@ header {
   align-items: center;
   z-index: 1000;
 }
-header .icon{
+header .icon {
   height: 50px;
   width: 50px;
 }
-header .icon:hover{
+header .icon:hover {
   scale: 0.9;
   transition: 0.2s;
 }
@@ -142,7 +142,7 @@ header ul li a.active:hover {
   opacity: 1;
   transform: translateY(10px);
 }
-.indicator{
+.indicator {
   position: absolute;
   transform: translateY(-50%);
   bottom: 50%;
@@ -153,8 +153,8 @@ header ul li a.active:hover {
   border: 6px solid var(--clrbg);
   transition: 1s;
 }
-.indicator::before{
-  content: '';
+.indicator::before {
+  content: "";
   position: absolute;
   top: 53%;
   right: -22px;
@@ -164,8 +164,8 @@ header ul li a.active:hover {
   border-top-left-radius: 20px;
   box-shadow: 0px -10px 0 0 transparent;
 }
-.indicator::after{
-  content: '';
+.indicator::after {
+  content: "";
   position: absolute;
   top: 53%;
   left: -22px;
@@ -176,23 +176,21 @@ header ul li a.active:hover {
   box-shadow: 0px -10px 0 0 transparent;
 }
 
-.navigation ul li:nth-child(1).active ~ .indicator{
+.navigation ul li:nth-child(1).active ~ .indicator {
   transform: translateX(calc(70px * 0));
 }
-.navigation ul li:nth-child(2).active ~ .indicator{
+.navigation ul li:nth-child(2).active ~ .indicator {
   transform: translateX(calc(70px * 1));
 }
-.navigation ul li:nth-child(3).active ~ .indicator{
+.navigation ul li:nth-child(3).active ~ .indicator {
   transform: translateX(calc(70px * 2));
 }
-.navigation ul li:nth-child(4).active ~ .indicator{
+.navigation ul li:nth-child(4).active ~ .indicator {
   transform: translateX(calc(70px * 3));
 }
-.navigation ul li:nth-child(5).active ~ .indicator{
+.navigation ul li:nth-child(5).active ~ .indicator {
   transform: translateX(calc(70px * 4));
 }
-
-
 
 /* section */
 section {
@@ -223,10 +221,10 @@ section img {
   object-fit: cover;
   pointer-events: none;
 }
-section#Journey{
+section#Journey {
   background: #302c4b;
 }
-section div.grada::before{
+section div.grada::before {
   content: "";
   position: absolute;
   justify-content: center;
@@ -238,7 +236,7 @@ section div.grada::before{
   background: linear-gradient(to bottom, #140f32, transparent);
   z-index: 1000;
 }
-section#Journey::before{
+section#Journey::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -284,14 +282,14 @@ section img#oasisld {
   color: #ffffff;
   transition: 0.2s ease-in-out;
 }
-.sec{
+.sec {
   margin-bottom: 150px;
   margin-top: 150px;
   position: relative;
   padding: 100px;
   background: #140f32;
 }
-.jor{
+.jor {
   margin-bottom: 150px;
   margin-top: 0;
   top: 0;
@@ -299,15 +297,15 @@ section img#oasisld {
   padding: 100px;
   padding-top: 50px;
 }
-.jor h2{
+.jor h2 {
   padding-bottom: 20px;
 }
-.sec h2{
+.sec h2 {
   font-size: 3.5em;
   margin-bottom: 10px;
   color: white;
 }
-.sec h3{
+.sec h3 {
   font-size: 1.3em;
   color: white;
   margin-bottom: 15px;
@@ -316,54 +314,53 @@ section img#oasisld {
   font-size: 1em;
   color: white;
 }
-.fadeInbot{
+.fadeInbot {
   animation: fadeInbot var(--sec);
 }
 @keyframes fadeInbot {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(50px);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-.fadeIntop{
+.fadeIntop {
   animation: fadeIntop var(--sec);
 }
 @keyframes fadeIntop {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(-50px);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-.fadeInleft{
+.fadeInleft {
   animation: fadeInleft var(--sec);
 }
 @keyframes fadeInleft {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(-50px);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-
 @media (max-width: 2000px) {
-  .navigation{
+  .navigation {
     display: none;
   }
 }
 @media (max-width: 800px) {
-  .navigation{
+  .navigation {
     display: block;
   }
   header ul li {
