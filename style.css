@@ -354,6 +354,7 @@ section img#oasisld {
   }
 }
 
+/* break point */
 @media (max-width: 2000px) {
   .navigation {
     display: none;
@@ -364,6 +365,18 @@ section img#oasisld {
     display: block;
   }
   header ul li {
+    display: none;
+  }
+  header {
+    position: relative;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .icon {
     display: none;
   }
 }
