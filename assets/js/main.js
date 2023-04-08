@@ -118,6 +118,7 @@ sr.reveal('.home__social, .home__scroll', {delay: 900, origin:'bottom'})
 var typed = new Typed(".multitext", {
     strings: ["DEVELOPER", "DESAIGNER", "DREAMER",],
     loop: true,
+    smartBackspace: true,
     typeSpeed: 120,
     backSpeed: 50,
     backDelay: 2000,

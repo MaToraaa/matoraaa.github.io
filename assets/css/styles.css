@@ -343,13 +343,19 @@ body.light-theme {
 .home__handle {
   justify-content: center;
   width: 190px;
-  height: 293px;
+  height: 220px;
   background: linear-gradient(180deg, hsla(var(--first-hue), var(--sat), var(--lig), 1), hsla(var(--first-hue), var(--sat), var(--lig), 0.2));
-  border-radius: 10rem 10rem 1rem 1rem;
+  border-radius: 26% 74% 53% 47% / 36% 60% 40% 64%; /*10rem 10rem 1rem 1rem*/
   display: flex;
   align-items: flex-end;
   justify-self: center;
   overflow: hidden;
+  animation: objectt 10s linear infinite;
+}
+@keyframes objectt {
+  50% {
+    border-radius: 60% 40% 91% 9% / 59% 27% 73% 41%;
+  }
 }
 
 .home__button {
@@ -441,7 +447,7 @@ body.light-theme {
 
 .about__img {
   width: 220px;
-  border-radius: 1.5rem;
+  border-radius: 65% 35% 70% 30% / 32% 53% 47% 68%;
   justify-self: center;
 }
 
@@ -970,7 +976,7 @@ body.light-theme {
   }
   .home__handle {
     width: 290px;
-    height: 400px;
+    height: 320px;
   }
   .home__img {
     width: 350px;
