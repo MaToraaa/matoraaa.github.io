@@ -14,8 +14,8 @@
         Teal: hsl(174, 63%, 62%)
   */
   --first-hue: 249;
-  --sat: 41%;
-  --lig: 60%;
+  --sat: 70%;
+  --lig: 70%;
   --second-hue: 249;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--first-hue), var(--sat), 68%); /* -4% */
@@ -215,6 +215,9 @@ body.light-theme {
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
 }
+.multitext {
+  color: var(--first-color);
+}
 
 /*=============== HEADER & NAV===============*/
 .header {
@@ -288,6 +291,26 @@ body.light-theme {
   padding-top: 2rem;
 }
 
+.home__container::before {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  content: "";
+  height: 10rem;
+  width: 10rem;
+  top: 0.5rem;
+  left: 0.5rem;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--first-color), pink);
+  animation: object1 4s linear infinite;
+}
+@keyframes object1 {
+  50% {
+    left: 2em;
+    top: 1rem;
+  }
+}
+
 .home__data {
   text-align: center;
 }
@@ -305,7 +328,7 @@ body.light-theme {
 }
 
 .home__education {
-  color: var(--text-color);
+  color: var(--title-color);
   margin-bottom: 2.5rem;
 }
 
@@ -922,6 +945,19 @@ body.light-theme {
   .container {
     margin-left: auto;
     margin-right: auto;
+  }
+  .home__container::before {
+    height: 15rem;
+    width: 15rem;
+    top: -5rem;
+    left: 8rem;
+    animation: object1 5s linear infinite;
+  }
+  @keyframes object1 {
+    50% {
+      left: 12rem;
+      top: 1rem;
+    }
   }
   .section {
     padding: 6.5rem 0 1rem;

@@ -114,3 +114,11 @@ sr.reveal('.home__data')
 sr.reveal('.home__handle', {delay: 700})
 sr.reveal('.home__social, .home__scroll', {delay: 900, origin:'bottom'})
 
+/*=============== TYPEANIMATION ===============*/
+var typed = new Typed(".multitext", {
+    strings: ["DEVELOPER", "DESAIGNER", "DREAMER",],
+    loop: true,
+    typeSpeed: 120,
+    backSpeed: 50,
+    backDelay: 2000,
+  });
