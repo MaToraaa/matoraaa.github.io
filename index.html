@@ -13,6 +13,9 @@
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="" />
 
+    <!--=============== AOS ===============-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
@@ -91,13 +94,13 @@
 
       <!--=============== ABOUT ===============-->
       <section class="about section" id="about">
-        <span class="section__subtitle">My Intro</span>
-        <h2 class="section__title">About Me</h2>
+        <span data-aos="fade-right" class="section__subtitle">My Intro</span>
+        <h2 data-aos="fade-left" class="section__title">About Me</h2>
 
         <div class="about__container container grid">
-          <img src="assets/img/about1.jpg" alt="" class="about__img" />
+          <img data-aos="fade-right" src="assets/img/about1.jpg" alt="" class="about__img" />
 
-          <div class="about__data">
+          <div data-aos="fade-left" class="about__data">
             <div class="about__info">
               <div class="about__box">
                 <i class="bx bx-award about__icon"></i>
@@ -127,10 +130,10 @@
 
       <!--=============== SKILLS ===============-->
       <section class="skills section" id="skills">
-        <span class="section__subtitle">My Abilities</span>
-        <h2 class="section__title">My Experience</h2>
+        <span data-aos="fade-right" class="section__subtitle">My Abilities</span>
+        <h2 data-aos="fade-left" class="section__title">My Experience</h2>
 
-        <div class="skills__container container grid">
+        <div data-aos="flip-left" data-aos-duration="2000" class="skills__container container grid">
           <div class="skills__content">
             <h3 class="skills__title">Front-end Developer</h3>
 
@@ -198,10 +201,10 @@
 
       <!--=============== SERVICES ===============-->
       <section class="services section">
-        <span class="section__subtitle">My Services</span>
-        <h2 class="section__title">What I Offer</h2>
+        <span data-aos="fade-right" class="section__subtitle">My Services</span>
+        <h2 data-aos="fade-left" class="section__title">What I Offer</h2>
 
-        <div class="services__container container grid">
+        <div data-aos="flip-up" class="services__container container grid">
           <div class="services__card">
             <h3 class="services__title">
               Product <br />
@@ -326,17 +329,17 @@
 
       <!--=============== WORK ===============-->
       <section class="work section" id="work">
-        <span class="section__subtitle">My portfolio</span>
-        <h2 class="section__title">Recent Work</h2>
+        <span data-aos="fade-right" class="section__subtitle">My portfolio</span>
+        <h2 data-aos="fade-left" class="section__title">Recent Work</h2>
 
-        <div class="work__filters">
+        <div data-aos="zoom-in-left" class="work__filters">
           <span class="work__item active-work" data-filter="all">All</span>
           <span class="work__item" data-filter=".web">Web</span>
           <span class="work__item" data-filter=".movil">Movil</span>
           <span class="work__item" data-filter=".design">Design</span>
         </div>
 
-        <div class="work__container container grid">
+        <div data-aos="zoom-in-right" class="work__container container grid">
           <div class="work__card mix web">
             <img src="assets/img/recent1.png" alt="" class="work__img" />
             <h3 class="work__title">Web Parallax Design</h3>
@@ -374,11 +377,11 @@
 
       <!--=============== CONTACT ===============-->
       <section class="contact section" id="contact">
-        <span class="section__subtitle">Get In Touch</span>
-        <h2 class="section__title">Contact Me</h2>
+        <span data-aos="fade-right" class="section__subtitle">Get In Touch</span>
+        <h2 data-aos="fade-left" class="section__title">Contact Me</h2>
 
         <div class="contact__container container grid">
-          <div class="contact__content">
+          <div data-aos="fade-right" class="contact__content">
             <h3 class="contact__title">Talk To Me</h3>
 
             <div class="contact__info">
@@ -418,7 +421,7 @@
             </div>
           </div>
 
-          <div class="contact__content">
+          <div data-aos="fade-left" data-aos-duration="2500" class="contact__content">
             <h3 class="contact__title">Write Me Your Project</h3>
 
             <form action="" class="contact__form">
@@ -478,6 +481,9 @@
 
     <!--=============== SCROLLREVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== AOS FADE ===============-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!--=============== SWIPER JS ===============-->
     <script src="assets/js/swiper-bundle.min.js"></script>
