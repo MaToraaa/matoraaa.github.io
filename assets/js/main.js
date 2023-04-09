@@ -128,5 +128,5 @@ AOS.init({
   delay: 100,
   duration: 1100,
   once: false,
-  mirror: false,
+  mirror: true,
 });
