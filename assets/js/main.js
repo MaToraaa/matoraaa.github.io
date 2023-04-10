@@ -10,9 +10,11 @@ window.addEventListener("scroll", scrollHeader);
 const modalViews = document.querySelectorAll(".services__modal"),
   modalBtns = document.querySelectorAll(".services__button"),
   modalClose = document.querySelectorAll(".services__modal-close");
+modalContain = document.querySelectorAll(".services__container");
 
 let modal = function (modalClick) {
   modalViews[modalClick].classList.add("active-modal");
+  modalContain[modalClick].removeAttribute("data-aos");
 };
 modalBtns.forEach((mb, i) => {
   mb.addEventListener("click", () => {
@@ -25,6 +27,9 @@ modalClose.forEach((mc) => {
     modalViews.forEach((mv) => {
       mv.classList.remove("active-modal");
     });
+    // modalContain.forEach((mct) => {
+    //   mct.setAttribute("data-aos", "flip-up");
+    // });
   });
 });
 
