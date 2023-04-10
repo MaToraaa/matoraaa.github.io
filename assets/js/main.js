@@ -27,9 +27,6 @@ modalClose.forEach((mc) => {
     modalViews.forEach((mv) => {
       mv.classList.remove("active-modal");
     });
-    // modalContain.forEach((mct) => {
-    //   mct.setAttribute("data-aos", "flip-up");
-    // });
   });
 });
 

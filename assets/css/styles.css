@@ -449,6 +449,12 @@ body.light-theme {
   width: 220px;
   border-radius: 65% 35% 70% 30% / 32% 53% 47% 68%;
   justify-self: center;
+  animation: about__img 5s linear infinite;
+}
+@keyframes about__img {
+  50% {
+    border-radius: 26% 74% 37% 63% / 64% 25% 75% 36%;
+  }
 }
 
 .about__data {
@@ -871,7 +877,7 @@ body.light-theme {
     font-size: var(--small-font-size);
   }
   .services__container {
-    grid-template-columns: 145px;
+    grid-template-columns: repeat(1, 160px);
     justify-content: center;
   }
   .work__item {
@@ -1015,7 +1021,7 @@ body.light-theme {
     margin-bottom: 2.5rem;
   }
   .skills__container {
-    grid-template-columns: repeat(1, 350px);
+    grid-template-columns: repeat(2, 350px);
     column-gap: 3rem;
   }
   .services__container {
