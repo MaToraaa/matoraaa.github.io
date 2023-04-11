@@ -10,7 +10,7 @@ window.addEventListener("scroll", scrollHeader);
 const modalViews = document.querySelectorAll(".services__modal"),
   modalBtns = document.querySelectorAll(".services__button"),
   modalClose = document.querySelectorAll(".services__modal-close");
-modalContain = document.querySelectorAll(".services__container");
+modalContain = document.querySelectorAll(".services__card");
 
 let modal = function (modalClick) {
   modalViews[modalClick].classList.add("active-modal");
