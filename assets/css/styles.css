@@ -877,7 +877,7 @@ body.light-theme {
     font-size: var(--small-font-size);
   }
   .services__container {
-    grid-template-columns: repeat(1, 160px);
+    grid-template-columns: 145px;
     justify-content: center;
   }
   .work__item {
