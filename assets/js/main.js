@@ -116,7 +116,7 @@ sr.reveal(".home__social, .home__scroll", { delay: 900, origin: "bottom" });
 
 /*=============== TYPEANIMATION ===============*/
 var typed = new Typed(".multitext", {
-  strings: ["DEVELOPER", "DESAIGNER", "DREAMER"],
+  strings: ["DEVELOPER", "DESAIGNER", "DEBATER", "DECIDER", "DREAMER"],
   loop: true,
   smartBackspace: true,
   typeSpeed: 120,

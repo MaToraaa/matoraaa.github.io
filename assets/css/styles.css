@@ -449,7 +449,7 @@ body.light-theme {
   width: 220px;
   border-radius: 65% 35% 70% 30% / 32% 53% 47% 68%;
   justify-self: center;
-  animation: about__img 5s linear infinite;
+  animation: about__img 4s linear infinite;
 }
 @keyframes about__img {
   50% {
