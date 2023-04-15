@@ -238,13 +238,28 @@ body.light-theme {
 }
 
 .nav__logo {
-  color: var(--first-color);
+  color: pink;
   font-weight: var(--font-medium);
-  transition: 0.4s;
+  transition: 0.4s ease-in-out;
+  animation: spanlog 6s linear infinite;
 }
-
+@keyframes spanlog {
+  50% {
+    color: var(--first-color);
+  }
+}
+.nav__logo span {
+  color: var(--first-color);
+  transition: 0.4s ease-in-out;
+  animation: spanlog2 6s linear infinite;
+}
+@keyframes spanlog2 {
+  50% {
+    color: pink;
+  }
+}
 .nav__logo:hover {
-  color: var(--first-color-alt);
+  transform: scale(1.2);
 }
 
 .nav__menu {
@@ -334,6 +349,12 @@ body.light-theme {
 
 .home__name {
   font-size: var(--biggest-font-size);
+  animation: homname 15s linear infinite;
+}
+@keyframes homname {
+  50% {
+    color: var(--first-color);
+  }
 }
 
 .home__img {
@@ -344,7 +365,11 @@ body.light-theme {
   justify-content: center;
   width: 190px;
   height: 220px;
-  background: linear-gradient(180deg, hsla(var(--first-hue), var(--sat), var(--lig), 1), hsla(var(--first-hue), var(--sat), var(--lig), 0.2));
+  background: linear-gradient(
+    180deg,
+    pink /*hsla(var(--first-hue), var(--sat), var(--lig), 1)*/,
+    hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
+  );
   border-radius: 26% 74% 53% 47% / 36% 60% 40% 64%; /*10rem 10rem 1rem 1rem*/
   display: flex;
   align-items: flex-end;
