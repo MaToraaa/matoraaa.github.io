@@ -1,0 +1,336 @@
+/* Animations */
+
+@keyframes popup {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes idle {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+/* CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  font-family: Geneva, Verdana, sans-serif;
+  color: white;
+  height: 100vh;
+  background-color: #333;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  height: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 5%;
+  background-color: rgba(68, 68, 68, 0.3);
+  border-bottom: 3px solid rgb(34, 34, 34, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: 0 0px 20px #252525;
+}
+
+.logo span {
+  color: rgb(34, 171, 206);
+  transition: 0.2s ease-in-out;
+}
+
+.logo {
+  display: flex;
+  transition: 0.2s ease-in-out;
+  animation: idle 3s ease-in-out infinite alternate;
+}
+
+.logo:hover {
+  color: rgb(26, 152, 255);
+  transition: 0.2s ease-in-out;
+}
+.logo:hover span {
+  color: rgb(255, 255, 255);
+  transition: 0.2s ease-in-out;
+}
+
+.nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+  transition: 0.2s ease-in-out;
+  transform: scale(0.9);
+}
+
+.nav a:hover {
+  color: rgb(255, 255, 255, 0.7);
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
+
+.nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid white;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav a .t,
+.account {
+  animation: popup 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) normal calc(var(--order) * 100ms);
+}
+
+/* Profile */
+.profile {
+  border-radius: 20px;
+  width: 2.5rem;
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 2.5rem;
+  background-image: url("./xeerazz.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 12px#222;
+}
+
+.profile:hover {
+  border-radius: 13px;
+  border: 1.5px solid rgb(255, 255, 255, 1);
+  transform: scale(1.5);
+}
+
+.profile:active {
+  transform: scale(1.25);
+}
+
+/* Card Form */
+form {
+  width: 75%;
+}
+.card {
+  display: block;
+  width: 100%;
+  position: relative;
+  background-color: rgba(68, 68, 68, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 42px#222;
+  animation: popup 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1 normal forwards;
+}
+
+.card-header {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid rgb(255, 255, 255, 0.5);
+}
+
+.card-header h3 {
+  color: white;
+  transition: 0.5s;
+}
+
+.card-header h3:hover {
+  color: rgb(16, 128, 255);
+  transition: 0.5s;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+/* Uploading File */
+.filescript {
+  margin-bottom: 1rem;
+}
+
+.filescript [type="file"] {
+  display: none;
+}
+
+.filescript label {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(68, 68, 68, 0.5);
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  box-shadow: 0 0 10px #222;
+  transition: 0.2s ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.filescript #num-of-files {
+  display: flex;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.filescript label:hover {
+  transform: scale(0.95);
+  border: 2px solid rgb(77, 154, 255);
+}
+
+.filescript label:focus,
+.filescript label:valid,
+.filescript label:active {
+  border: 2px solid rgb(109, 172, 255);
+  transform: scale(0.9);
+}
+
+/* Key Input */
+.inputBox {
+  margin-bottom: 0.4rem;
+  position: relative;
+  width: 250px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(68, 68, 68, 0.5);
+  border-radius: 5px;
+  font-size: 1em;
+  color: white;
+  transition: 0.5s ease;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: rgb(255, 255, 255);
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: rgb(68, 68, 68);
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 1px solid white;
+  background: rgb(68, 68, 68);
+}
+
+/* Button submit */
+.card-body button {
+  display: block;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  font-size: 1.3em;
+  position: relative;
+  background: rgba(255, 255, 255, 1);
+  padding: 15px 30px;
+  transition: 0.5s;
+}
+
+.card-body button:hover {
+  letter-spacing: 0.25em;
+  background: rgb(45, 188, 255);
+  color: rgb(45, 171, 255);
+  box-shadow: 0 0 15px rgba(255, 157, 45, 0.5);
+}
+
+.card-body button::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: rgb(68, 68, 68);
+}
+
+.card-body button span {
+  position: relative;
+  z-index: 1;
+}
+
+.card-body button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.card-body button i::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 75%;
+  border: 2px solid rgb(16, 112, 255);
+  width: 15px;
+  transform: translateY(-4px);
+  height: 8px;
+  background: rgb(68, 68, 68);
+  transition: 0.5s;
+}
+
+.card-body button:hover i::before {
+  transform: translateX(-50%) translateY(-4px);
+  border: 2px solid #fff;
+  width: 30px;
+  left: 20%;
+}
+
+.card-body button i::after {
+  content: "";
+  position: absolute;
+  border: 2px solid rgb(16, 219, 255);
+  bottom: 0;
+  left: 15%;
+  width: 15px;
+  height: 8px;
+  background: rgb(68, 68, 68);
+  transition: 0.5s;
+  transform: translateY(4px);
+}
+
+.card-body button:hover i::after {
+  transform: translateX(-50%) translateY(4px);
+  border: 2px solid #fff;
+  width: 30px;
+  left: 80%;
+}

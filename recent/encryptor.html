@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="encryptor/style.css" />
+    <title>Lua Obfuscator</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <h1 class="logo"><span>Lua</span> Xor</h1>
+
+      <div class="nav">
+        <a href="#"><div class="t" style="--order: 2">Obfuscator</div></a>
+      </div>
+      <div class="account" style="--order: 4">
+        <div class="profile"></div>
+      </div>
+    </nav>
+
+    <!-- Card -->
+    <form id="form">
+      <div class="card">
+        <div class="card-header">
+          <h3>Obfuscator</h3>
+        </div>
+
+        <div class="card-body">
+          <div class="filescript">
+            <h3>Upload Your File Here!</h3>
+            <input type="file" id="file" />
+            <label for="file">Select Script</label>
+            <div id="num-of-files">No File Choosen</div>
+            <h5>Only receive .lua or .txt file!</h5>
+          </div>
+
+          <div class="inputBox">
+            <input type="text" required id="key" />
+            <span>Encrypt Key</span>
+          </div>
+
+          <h5>For encrypt and decrypt script.</h5>
+          <button type="submit" id="obfuscate"><span>Obfuscate</span><i></i></button>
+        </div>
+      </div>
+    </form>
+
+    <script src="encryptor/main.js"></script>
+  </body>
+</html>
