@@ -17,7 +17,8 @@
   --sat: 70%;
   --lig: 70%;
   --second-hue: 249;
-  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  /* --first-color: hsl(var(--first-hue), var(--sat), var(--lig)); */
+  --first-color: cyan;
   --first-color-alt: hsl(var(--first-hue), var(--sat), 68%); /* -4% */
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
@@ -25,6 +26,7 @@
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
   --body-color: hsl(var(--second-hue), 48%, 8%);
   --container-color: hsl(var(--second-hue), 32%, 12%);
+  --bar-color: hsla(var(--second-hue), 48%, 8%, 0.7);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -127,6 +129,8 @@ body.light-theme {
   --title-color: hsl(var(--second-hue), 15%, 15%);
   --text-color: hsl(var(--second-hue), 8%, 35%);
   --body-color: hsl(var(--second-hue), 100%, 99%);
+  --bar-color: hsla(var(--second-hue), 100%, 99%, 0.7);
+  --first-color: #cf7de8;
   --container-color: #fff;
 }
 
@@ -136,6 +140,11 @@ body.light-theme {
 ==========*/
 .light-theme .scroll-header {
   box-shadow: 0 2px 4px hsla(0, 0%, 1%, 0.1);
+}
+.light-theme .nav__logo,
+.light-theme .nav__logo span {
+  color: magenta;
+  animation: none;
 }
 .light-theme .nav__menu {
   background-color: hsla(var(--second-hue), 32%, 90%, 0.8);
@@ -164,10 +173,11 @@ body.light-theme {
   box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, 0.2);
 }
 .light-theme .skills__content,
+.light-theme .blog__card,
 .light-theme .services__card,
 .light-theme .work__card,
 .light-theme .contact__card {
-  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, 0.2);
+  box-shadow: 0 5px 16px hsla(var(--second-hue), 48%, 8%, 0.2);
 }
 .light-theme::-webkit-scrollbar {
   background-color: hsl(var(--second-hue), 8%, 66%);
@@ -225,7 +235,7 @@ body.light-theme {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--body-color);
+  background-color: var(--bar-color);
   z-index: var(--z-fixed);
   transition: 0.4s;
 }
@@ -238,7 +248,7 @@ body.light-theme {
 }
 
 .nav__logo {
-  color: pink;
+  color: white;
   font-weight: var(--font-medium);
   transition: 0.4s ease-in-out;
   animation: spanlog 6s linear infinite;
@@ -255,9 +265,10 @@ body.light-theme {
 }
 @keyframes spanlog2 {
   50% {
-    color: pink;
+    color: white;
   }
 }
+
 .nav__logo:hover {
   transform: scale(1.2);
 }
@@ -271,6 +282,7 @@ body.light-theme {
   padding: 1rem 2.25rem;
   backdrop-filter: blur(10px);
   transition: 0.4s;
+  opacity: 1;
 }
 
 .nav__list {
@@ -367,8 +379,8 @@ body.light-theme {
   height: 220px;
   background: linear-gradient(
     180deg,
-    pink /*hsla(var(--first-hue), var(--sat), var(--lig), 1)*/,
-    hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
+    var(--first-color) /*hsla(var(--first-hue), var(--sat), var(--lig), 1)*/,
+    hsla(var(--first-hue), var(--sat), var(--lig), 0.1)
   );
   border-radius: 26% 74% 53% 47% / 36% 60% 40% 64%; /*10rem 10rem 1rem 1rem*/
   display: flex;
@@ -677,6 +689,61 @@ body.light-theme {
   opacity: 1;
   visibility: visible;
 }
+/*=============== BLOG ===============*/
+.blog__container{
+ padding-top: 1rem;
+ align-items: center;
+ justify-content: center;
+}
+.blog__card{
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  display: flex;
+
+  padding: 1rem;
+  justify-content: space-between;
+}
+.blog__img{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex: 1 ; 
+}
+.blog__img img{
+  border-radius: 1rem;
+  width: 20rem;
+  height: auto;
+}
+.blog__content{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.blog__title{
+  justify-content: center;
+  font-size: var(--h3-font-size);
+  display: flex;
+  color: var(--title-color);
+  flex-direction: row;
+  text-align: center;
+
+}
+.blog__button{
+  margin-left: .5rem;
+  width: max-content;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  display: flex;  
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.blog__desc{
+  font-size: var(--small-font-size);
+  text-align: left;
+  margin: .7rem;
+}
 
 /*=============== WORK ===============*/
 .work__container {
@@ -911,8 +978,8 @@ body.light-theme {
   .work__filters {
     column-gap: 0.25rem;
   }
-}
 
+}
 /* For medium devices */
 @media screen and (min-width: 576px) {
   .nav__menu {
@@ -965,6 +1032,9 @@ body.light-theme {
 }
 
 @media screen and (min-width: 767px) {
+  .blog__container {
+    grid-template-columns: repeat(2, max-content);
+  }
   .work__container {
     grid-template-columns: repeat(2, max-content);
   }
