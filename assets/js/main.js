@@ -1,3 +1,37 @@
+/*=============== SWAL ===============*/
+function confirmDownload(event) {
+  event.preventDefault(); // Mencegah pengunduhan langsung
+
+  swal({
+    title: "Confirm?",
+    text: "Are you sure you want to proceed with the download?",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  })
+  .then((willProceed) => {
+    if (willProceed) {
+      window.location.href = event.target.href; // Melakukan pengunduhan manual
+    }
+  });
+}
+
+function showConfirmation(event) {
+  event.preventDefault(); // Mencegah navigasi langsung ke link
+
+  swal({
+    title: "Confirm?",
+    text: "Are you sure you want to proceed to link?",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  })
+  .then((willProceed) => {
+    if (willProceed) {
+      window.open(event.target.href, "_blank"); // Membuka link di tab baru
+    }
+  });
+}
 /*=============== Prevent Right Click ===============*/
 document.addEventListener('contextmenu', function(event) {
   event.preventDefault();
