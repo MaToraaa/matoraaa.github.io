@@ -1,3 +1,9 @@
+/*=============== Prevent Right Click ===============*/
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault();
+  alert('Klik kanan tidak diizinkan!');
+});
+
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const scrollHeader = () => {
   const header = document.getElementById("header");

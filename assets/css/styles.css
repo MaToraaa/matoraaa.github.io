@@ -470,6 +470,22 @@ body.light-theme {
   color: var(--body-color);
 }
 
+.button--g:hover {
+  background-color: transparent;
+  border: 2px solid var(--first-color);
+  color: var(--first-color);
+}
+
+.button--g {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  transition: 0.4s;
+}
+
 .button--ghost {
   background-color: transparent;
   border: 2px solid var(--first-color);
@@ -1113,7 +1129,7 @@ body.light-theme {
   }
   .about__description {
     padding: 0 4rem 0 0;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
   }
   .skills__container {
     grid-template-columns: repeat(2, 350px);
